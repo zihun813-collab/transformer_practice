@@ -42,7 +42,7 @@
 * **해결:** `torch.backends.mps.is_available()` 체크 로직을 추가하여, Mac 환경에서는 `mps` 장치를 사용하고 그 외에는 CPU를 사용하도록 호환성을 높임. 
 3. **Hugging Face API 변경 대응**
 * **문제:** `TrainingArguments`의 `evaluation_strategy` 파라미터가 최신 버전에서 `eval_strategy`로 변경되어 에러 발생. 
-* **해결:** 공식 문서를 참고하여 최신 API 규격에 맞게 파라미터명을 수정함. ---
+* **해결:** 공식 문서를 참고하여 최신 API 규격에 맞게 파라미터명을 수정함. 
 
 ---
 
