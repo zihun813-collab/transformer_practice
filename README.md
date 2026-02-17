@@ -70,5 +70,6 @@
 
 
 ### 설치 및 실행 방법
-```bash # 1. 라이브러리 설치 pip install -r requirements.txt 
+```bash
+# 1. 라이브러리 설치 pip install -r requirements.txt 
 # 2. 웹 애플리케이션 실행 streamlit run app.py
