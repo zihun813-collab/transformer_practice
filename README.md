@@ -49,14 +49,14 @@
 ### 실행 화면
 ![Result1](./assets/positive.png) 
 ![Result2](./assets/negative.png)
-![Result3](./assets/복합문1.png)
-![Result4](./assets/복합문2.png)
+![Result3](./assets/complex1.png)
+![Result4](./assets/complex2.png)
 ![Result5](./assets/sarcasm1.png)
 ![Result6](./assets/sarcasm2.png)
 ![Result7](./assets/sarcasm3.png)
-![Result8](./assets/봉준호.png)
-![Result9](./assets/김기덕.png)
-![Result10](./assets/홍상수.png)
+![Result8](./assets/director1.png)
+![Result9](./assets/director2.png)
+![Result10](./assets/director3.png)
 ---
 
 ### 결과 분석 및 한계
