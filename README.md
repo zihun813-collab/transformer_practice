@@ -15,26 +15,26 @@
 ---
 
 ### 사용된 기술
-* **Model:** `beomi/KcELECTRA-base` (한국어 댓글 데이터로 사전 학습된 모델 사용) 
-* **Data:** Naver Sentiment Movie Corpus (NSMC) 
-* **Library:** PyTorch, Hugging Face Transformers, Pandas, Scikit-learn 
-* **Deployment:** Streamlit (웹 대시보드 구현) 
-* **Environment:** Mac OS (MPS Acceleration) / Google Colab
+* **모델:** `beomi/KcELECTRA-base` (한국어 댓글 데이터로 사전 학습된 모델 사용) 
+* **데이터:** Naver Sentiment Movie Corpus (NSMC) 
+* **라이브러리:** PyTorch, Hugging Face Transformers, Pandas, Scikit-learn 
+* **배포:** Streamlit (웹 대시보드 구현) 
+* **환경:** Mac OS (MPS Acceleration)
 
 ---
 
 ###  프로젝트 구조
-1. **Data Load:** `nsmc` 데이터셋 로드 (학습 속도 최적화를 위해 일부 샘플링 사용) 
-2. **Tokenization:** KcELECTRA 토크나이저 활용 (Max Length: 128) 
-3. **Fine-tuning:** 
-* Pre-trained 모델의 가중치를 가져와 영화 리뷰 데이터에 맞게 미세 조정 
+1. **데이터 로딩:** `nsmc` 데이터셋 로드 (학습 속도 최적화를 위해 일부 샘플링 사용) 
+2. **토큰화:** KcELECTRA 토크나이저 활용 (Max Length: 128) 
+3. **파인튜닝:** 
+* 사전학습모델의 가중치를 가져와 영화 리뷰 데이터에 맞게 미세 조정 
 * Mac M-series 칩셋의 `MPS` 가속 활용하여 로컬 학습 환경 구축 
-4. **Serving:** Streamlit을 활용해 사용자가 텍스트를 입력하면 확률을 시각화하여 반환 
+4. **배포:** Streamlit을 활용해 사용자가 텍스트를 입력하면 확률을 시각화하여 반환 
 
 ---
 
 ### 트러블 슈팅
- **1. 라이브러리 버전 호환성 문제 (Dependency Conflict)** 
+ **1. 라이브러리 버전 호환성 문제** 
 * **문제:** `datasets` 라이브러리 업데이트로 인해 `load_dataset` 함수가 보안 정책상 스크립트 실행을 차단함. 
 * **해결:** `wget`을 사용하여 원본 데이터를 직접 다운로드하고, `pandas`로 로드하여 `Dataset` 객체로 변환하는 방식으로 우회하여 파이프라인 안정성을 확보함. 
 **2. Mac OS(Apple Silicon) 가속 설정** 
