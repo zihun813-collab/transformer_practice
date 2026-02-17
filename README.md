@@ -1,4 +1,4 @@
-# Ko-ELECTRA 기반 한국어 리뷰 감성 분석기
+# Kc-ELECTRA 기반 한국어 리뷰 감성 분석기
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) 
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red) 
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow) 
