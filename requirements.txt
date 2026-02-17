@@ -1,0 +1,9 @@
+```text
+    torch
+    transformers
+    datasets
+    streamlit
+    scikit-learn
+    pandas
+    accelerate
+    ```
