@@ -34,13 +34,13 @@
 ---
 
 ### 트러블 슈팅
- **1. 라이브러리 버전 호환성 문제** 
+1. **라이브러리 버전 호환성 문제** 
 * **문제:** `datasets` 라이브러리 업데이트로 인해 `load_dataset` 함수가 보안 정책상 스크립트 실행을 차단함. 
 * **해결:** `wget`을 사용하여 원본 데이터를 직접 다운로드하고, `pandas`로 로드하여 `Dataset` 객체로 변환하는 방식으로 우회하여 파이프라인 안정성을 확보함. 
-**2. Mac OS(Apple Silicon) 가속 설정** 
+2. **Mac OS(Apple Silicon) 가속 설정** 
 * **문제:** 일반적인 `cuda` 설정이 Mac 환경에서 작동하지 않음. 
 * **해결:** `torch.backends.mps.is_available()` 체크 로직을 추가하여, Mac 환경에서는 `mps` 장치를 사용하고 그 외에는 CPU를 사용하도록 호환성을 높임. 
-**3. Hugging Face API 변경 대응**
+3. **Hugging Face API 변경 대응**
 * **문제:** `TrainingArguments`의 `evaluation_strategy` 파라미터가 최신 버전에서 `eval_strategy`로 변경되어 에러 발생. 
 * **해결:** 공식 문서를 참고하여 최신 API 규격에 맞게 파라미터명을 수정함. ---
 
